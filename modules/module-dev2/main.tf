@@ -4,7 +4,7 @@ resource "azurerm_resource_group" "example" {
 }
 
 resource "azurerm_application_insights" "example" {
-  name                = "tf-test-st-appinsights"
+  name                = "tf-test-st2-appinsights"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
   application_type    = "web"
