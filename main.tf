@@ -5,18 +5,27 @@ provider "azurerm" {
 }
 
 
-module "module1" {
+module "module-dev1" {
  source = "./modules/module-dev1"
- rgname = var.rgname
- location = var.location
- workspacename = var.workspacename
- insightname = var.insightname
+ rgnamedev = var.rgnamedev
+ locationdev = var.locationdev
+ workspacenamedev = var.workspacenamedev
+ insightnamedev = var.insightnamedev
  
 }
 
-module "module2" {
+module "module-dev2" {
  source = "./modules/module-dev2"
- rgname = var.rgname
- location = var.location
- insight2name = var.insight2name 
+ rgnamedev = var.rgnamedev
+ locationdev = var.locationdev
+ insight2dev = var.insight2dev
+}
+
+module "module-qa1" {
+ source = "./modules/module-qa1"
+ rgnameqa = var.rgnameqa
+ locationqa = var.locationqa
+ workspacenameqa = var.workspacenameqa
+ insightnameqa = var.insightnameqa
+ 
 }
