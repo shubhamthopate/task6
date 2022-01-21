@@ -12,7 +12,7 @@ resource "azurerm_log_analytics_workspace" "example1" {
   retention_in_days   = 30
 }
 
-resource "azurerm_application_insights" "example" {
+resource "azurerm_application_insights" "example1" {
   name                = var.insightnameqa
   location            = azurerm_resource_group.example1.location
   resource_group_name = azurerm_resource_group.example1.name
