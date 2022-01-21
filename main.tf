@@ -4,7 +4,10 @@ provider "azurerm" {
 
 }
 
-
+resource "azurerm_resource_group" "example" {
+  name     = var.rgnamedev
+  location = var.locationdev
+}
 module "module-dev1" {
  source = "./modules/module-dev1"
  rgnamedev = var.rgnamedev
