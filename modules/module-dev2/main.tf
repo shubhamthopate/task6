@@ -1,10 +1,10 @@
 resource "azurerm_resource_group" "example" {
-  name     = "st-dev"
-  location = "eastus"
+  name     = var.rgname
+  location = var.location
 }
 
 resource "azurerm_application_insights" "example" {
-  name                = "tf-test-st2-appinsights"
+  name                = var.insight2name
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
   application_type    = "web"

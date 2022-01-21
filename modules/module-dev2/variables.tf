@@ -8,15 +8,7 @@ variable "location" {
   
 }
 
-variable "workspacename" {
-  type = string
-  
-}
 
-variable "insightname" {
-  type = string
- 
-}
 
 variable "insight2name" {
   type = string
