@@ -9,3 +9,4 @@ locationqa = "westus"
 workspacenameqa = "workspace-st-test1"
 insightnameqa = "tf-test-st2q-appinsights"
 
+insight2qa = "tf-test-st2q2-appinsights"

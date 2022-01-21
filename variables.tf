@@ -42,3 +42,8 @@ variable "insight2dev" {
   type = string
  
 }
+
+variable "insight2qa" {
+  type = string
+ 
+}
