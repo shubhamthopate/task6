@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "example" {
-  name     = rg.name
-  location = rg.location
+  name     = var.rgname
+  location = var.location
 }
 
 resource "azurerm_log_analytics_workspace" "example" {
