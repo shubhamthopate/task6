@@ -30,10 +30,3 @@ module "module-qa1" {
  
 }
 
-module "module-qa2" {
- source = "./modules/module-qa2"
- rgnameqa = var.rgnameqa
- locationqa = var.locationqa
- insight2qa = var.insight2qa
- 
-}
