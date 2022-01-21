@@ -5,8 +5,8 @@ data "azurerm_resource_group" "example1" {
 
 resource "azurerm_application_insights" "example1" {
   name                = var.insight2qa
-  location            = azurerm_resource_group.example1.location
-  resource_group_name = azurerm_resource_group.example1.name
+  location            = data.azurerm_resource_group.example1.location
+  resource_group_name = data.azurerm_resource_group.example1.name
   application_type    = "web"
 }
 
