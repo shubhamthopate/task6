@@ -1,19 +1,19 @@
-data "azurerm_resource_group" "example" {
-  name     = var.rgnamedev
+data "azurerm_resource_group" "example1" {
+  name     = var.rgnameqa
  
 }
 
-resource "azurerm_application_insights" "example" {
-  name                = var.insight2dev
-  location            = var.locationdev
-  resource_group_name = var.rgnamedev
+resource "azurerm_application_insights" "example1" {
+  name                = var.insight2qa
+  location            = azurerm_resource_group.example1.location
+  resource_group_name = azurerm_resource_group.example1.name
   application_type    = "web"
 }
 
 output "instrumentation_key" {
-  value = azurerm_application_insights.example.instrumentation_key
+  value = azurerm_application_insights.example1.instrumentation_key
 }
 
 output "app_id" {
-  value = azurerm_application_insights.example.app_id
+  value = azurerm_application_insights.example1.app_id
 }
