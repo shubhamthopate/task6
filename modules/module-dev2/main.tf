@@ -1,6 +1,6 @@
 data "azurerm_resource_group" "example" {
   name     = var.rgname
-  location = var.location
+ 
 }
 
 resource "azurerm_application_insights" "example" {
