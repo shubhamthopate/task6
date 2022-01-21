@@ -1,7 +1,6 @@
 data "azurerm_resource_group" "example" {
+  name     = var.rgnamedev
   
-  location            = data.azurerm_resource_group.example.location
-  resource_group_name = data.azurerm_resource_group.example.name
 
  
 }
