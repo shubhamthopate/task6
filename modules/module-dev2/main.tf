@@ -1,12 +1,12 @@
 data "azurerm_resource_group" "example" {
-  name     = var.rgname
+  name     = var.rgnamedev
  
 }
 
 resource "azurerm_application_insights" "example" {
-  name                = var.insight2name
-  location            = var.location
-  resource_group_name = var.rgname
+  name                = var.insight2dev
+  location            = var.locationdev
+  resource_group_name = var.rgnamedev
   application_type    = "web"
 }
 

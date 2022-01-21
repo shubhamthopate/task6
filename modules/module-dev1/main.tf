@@ -1,10 +1,10 @@
 resource "azurerm_resource_group" "example" {
-  name     = var.rgname
-  location = var.location
+  name     = var.rgnamedev
+  location = var.locationdev
 }
 
 resource "azurerm_log_analytics_workspace" "example" {
-  name                = var.workspacename
+  name                = var.workspacenamedev
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
   sku                 = "PerGB2018"
@@ -12,7 +12,7 @@ resource "azurerm_log_analytics_workspace" "example" {
 }
 
 resource "azurerm_application_insights" "example" {
-  name                = var.insightname
+  name                = var.insightnamedev
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
   workspace_id        = azurerm_log_analytics_workspace.example.id

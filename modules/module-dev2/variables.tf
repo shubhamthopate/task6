@@ -1,16 +1,16 @@
-variable "rgname" {
+variable "rgnamedev" {
   type = string
   
 }
 
-variable "location" {
+variable "locationdev" {
   type = string
   
 }
 
 
 
-variable "insight2name" {
+variable "insight2dev" {
   type = string
  
 }
